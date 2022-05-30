@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: niha
+  name: niha
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: niha
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: niha
+    spec:
+      containers:
+      - image: rithu1320/tkn
+        name: tkn
+        resources: {}
+status: {}
