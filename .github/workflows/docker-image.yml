@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: docker/build-push-action@v3.2.0
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: push the image
+      with:
+        url: docker.io
+        username: rithu1320
+        password: jyothi3113
+      
